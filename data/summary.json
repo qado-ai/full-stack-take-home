@@ -1,0 +1,92 @@
+[
+  {
+    "file_name": "contract1.txt",
+    "industry": "Manufacturing",
+    "liability_type": "unlimited",
+    "liability_detail": "unbeschränkt haftet, ohne dass eine summenmäßige Begrenzung greift",
+    "payment_terms_days": 30,
+    "risk_level": "High",
+    "rationale": "High Risk because liability is explicitly unlimited ('unbeschränkt haftet')."
+  },
+  {
+    "file_name": "contract2.txt",
+    "industry": "Manufacturing",
+    "liability_type": "unlimited",
+    "liability_detail": "Haftungsobergrenze für Schäden ... ausdrücklich ausgeschlossen ist und der Lieferant somit unbegrenzt einsteht",
+    "payment_terms_days": 30,
+    "risk_level": "High",
+    "rationale": "High Risk due to explicit exclusion of liability caps ('unbegrenzt einsteht')."
+  },
+  {
+    "file_name": "contract3.txt",
+    "industry": "Manufacturing (Components)",
+    "liability_type": "unlimited",
+    "liability_detail": "keine summenschmäßige Limitierung gilt, d.h. die Haftung ist der Höhe nach unbeschränkt",
+    "payment_terms_days": 30,
+    "risk_level": "High",
+    "rationale": "High Risk as liability is unlimited in amount ('der Höhe nach unbeschränkt')."
+  },
+  {
+    "file_name": "contract4.txt",
+    "industry": "Logistics",
+    "liability_type": "capped",
+    "liability_detail": "maximal auf die Höhe des doppelten Auftragswertes begrenzt",
+    "payment_terms_days": 90,
+    "risk_level": "Medium",
+    "rationale": "Medium Risk because payment is > 60 days (90 days), though liability is capped."
+  },
+  {
+    "file_name": "contract5.txt",
+    "industry": "Industrial (Raw Materials)",
+    "liability_type": "capped",
+    "liability_detail": "begrenzt auf den vertragstypischen, vernünftigerweise vorhersehbaren Schaden",
+    "payment_terms_days": 90,
+    "risk_level": "Medium",
+    "rationale": "Medium Risk due to extended payment terms (90 days net) with standard liability limits."
+  },
+  {
+    "file_name": "contract6.txt",
+    "industry": "Automotive",
+    "liability_type": "capped",
+    "liability_detail": "auf 1 Mio. EUR pro Schadensereignis pauschaliert begrenzt",
+    "payment_terms_days": 75,
+    "risk_level": "Medium",
+    "rationale": "Medium Risk for payment terms of 75 days, despite a fixed liability cap."
+  },
+  {
+    "file_name": "contract7.txt",
+    "industry": "IT Projects",
+    "liability_type": "unlimited",
+    "liability_detail": "für sämtliche verursachten Schäden unbeschränkt und der Höhe nach unlimitiert haftet",
+    "payment_terms_days": 90,
+    "risk_level": "Combo",
+    "rationale": "Combo Risk: Unlimited liability ('unlimitiert haftet') plus extreme payment terms (90 days)."
+  },
+  {
+    "file_name": "contract8.txt",
+    "industry": "IT Services",
+    "liability_type": "capped",
+    "liability_detail": "auf den Auftragswert begrenzt",
+    "payment_terms_days": 30,
+    "risk_level": "Low",
+    "rationale": "Low Risk: Liability capped at order value and standard 30-day payment."
+  },
+  {
+    "file_name": "contract9.txt",
+    "industry": "General Trade",
+    "liability_type": "capped",
+    "liability_detail": "auf den direkten Schaden und die Höhe des Lieferwertes begrenzt",
+    "payment_terms_days": 30,
+    "risk_level": "Low",
+    "rationale": "Low Risk: Liability limited to delivery value and standard payment terms."
+  },
+  {
+    "file_name": "contract10.txt",
+    "industry": "Professional Services",
+    "liability_type": "capped",
+    "liability_detail": "auf die Deckungssumme der Berufshaftpflichtversicherung beschränkt",
+    "payment_terms_days": 14,
+    "risk_level": "Low",
+    "rationale": "Low Risk: Liability limited to insurance cover and favorable payment terms (14 days)."
+  }
+]

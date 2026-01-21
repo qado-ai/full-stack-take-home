@@ -1,0 +1,1 @@
+{"message":"Validation Failed","errors":[{"message":"You don't have permission to change the default branch.","resource":"Repository","field":"default_branch","code":"invalid"}],"documentation_url":"https://docs.github.com/rest/repos/repos#update-a-repository","status":"422"}gh: Validation Failed (HTTP 422)
