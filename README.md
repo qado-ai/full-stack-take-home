@@ -1,4 +1,5 @@
-# Take-Home Task: AI Contract Intelligence Prototype
+# Take-Home Challenge: FDE AI Contract Intelligence Prototype
+Welcome to the Forward Deployed Engineer challenge!
 
 **Role**: Forward deployed AI Product 
 **Timeboxed**: 6–8 hours recommended. We value a working MVP over a complete feature set. If you hit the time limit, document what you would have done next.
