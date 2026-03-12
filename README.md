@@ -6,13 +6,16 @@
 This exercise evaluates both **technical product engineering skills** and the ability to **communicate solutions to customers**. Many engineers in our team interact directly with clients, so explaining technical capabilities in a clear and structured way is an important part of the role.
 
 ---
-
 ## How to Start This Challenge
 
-1. Click the green **"Use this template"** button (top right of this page) and select **"Create a new repository"**.
-2. **Important**: Select **"Private"** under the visibility settings to keep your solution hidden.
-3. Name the repository `yourname-qado-takehome`.
-4. Once you are finished, invite `salpers` and `heikotroetsch` as collaborators so we can review your code.
+> **⚠️ CRITICAL: You must check "Include all branches" when creating your repository, otherwise you will lose the scaffolding for this specific role!**
+
+1. **Create your repository:** Click the green **"Use this template"** button (top right of this page) and select **"Create a new repository"**.
+2. **Include branches:** Check the box that says **"Include all branches"**.
+3. **Set visibility:** Select **"Private"** under the visibility settings to keep your solution hidden.
+4. **Name it:** Name the repository `yourname-qado-takehome`.
+5. **Switch to this branch:** Once your new repository is generated, make sure you switch to your assigned role branch (e.g., `role/FDE`) to begin your work. 
+6. **Submit:** When you are finished, invite **`@salpers`** and **`@heikotroetsch`** as collaborators so we can review your code.
 
 ---
 
