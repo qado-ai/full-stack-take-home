@@ -92,11 +92,13 @@ We are looking for a pragmatic Product Engineer who produces clean code. We eval
 
 ## 6. Submission Guidelines
 
-**⚠️ IMPORTANT: Do not fork this repository publicly.**
+### 🚀 How to Submit Your Work
+Before proceeding, please ensure you have generated this repository as a **Private** repo and are actively working on the `SWE` branch.
 
-To submit your work, please follow these steps:
+1. **Complete your work** Commit your changes directly to this branch (or merge your feature branches into it).
 
-1.  **Invite Collaborators**: Ensure `salpers` and `heikotroetsch` are invited as collaborators to your private repository.
-2.  **Notify Us**: Email us the link to your repository when you are finished.
+2. **Invite Collaborators** Invite `@salpers` and `@heikotroetsch` to your private repository so we can review your code.
 
-We look forward to seeing your solution!
+3. **Notify Us** Email us the link to your repository once you are finished and ready for review.
+
+---
