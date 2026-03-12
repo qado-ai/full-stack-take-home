@@ -93,7 +93,7 @@ We are looking for a pragmatic Product Engineer who produces clean code. We eval
 ## 6. Submission Guidelines
 
 ### 🚀 How to Submit Your Work
-Before proceeding, please ensure you have generated this repository as a **Private** repo and are actively working on the `SWE` branch.
+Before proceeding, please ensure you have generated this repository as a **Private** repo and are actively working on your role branch (e.g., `role/FDE`, `role/SWE`).
 
 1. **Complete your work** Commit your changes directly to this branch (or merge your feature branches into it).
 
