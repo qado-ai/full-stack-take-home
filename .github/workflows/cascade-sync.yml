@@ -1,0 +1,46 @@
+name: Cascade Main Updates to Role Branches
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  create-sync-prs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        # We need fetch-depth: 0 to ensure git knows about all the remote branches
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate PRs for all role branches
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 1. Find all remote branches that start with 'origin/role/'
+          # 2. Strip 'origin/' so we just have the branch name (e.g., 'role/FDE')
+          # 3. Clean up any whitespace
+          ROLE_BRANCHES=$(git branch -r | grep 'origin/role/' | sed 's/origin\///' | tr -d ' ')
+
+          if [ -z "$ROLE_BRANCHES" ]; then
+            echo "No role branches found."
+            exit 0
+          fi
+
+          # Loop through each branch and use the GitHub CLI to open a PR
+          for BRANCH in $ROLE_BRANCHES; do
+            echo "Checking sync for branch: $BRANCH..."
+
+            gh pr create \
+              --base "$BRANCH" \
+              --head main \
+              --title "🔄 Sync: Cascade latest scaffolding to $BRANCH" \
+              --body "Automated PR to bring the latest base scaffolding updates from \`main\` into the \`$BRANCH\` branch. Please review and resolve any merge conflicts before merging." \
+              || echo "ℹ️ PR already exists or no changes to sync for $BRANCH."
+          done
