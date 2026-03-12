@@ -170,15 +170,16 @@ We also evaluate:
 
 # 8. Submission Guidelines
 
-**⚠️ IMPORTANT: Do not fork this repository publicly.**
+> **⚠️ IMPORTANT: Do not fork this repository publicly.**
 
-To submit your work:
+### 🚀 How to Submit Your Work
+Before proceeding, please ensure you have generated this repository as a **Private** repo and are actively working on the `FDE` branch.
 
-1. **Invite Collaborators**  
-   Invite `salpers` and `heikotroetsch` to your private repository.
+1. **Complete your work** Commit your changes directly to this branch (or merge your feature branches into it).
 
-2. **Notify Us**  
-   Email us the link to the repository once you are finished.
+2. **Invite Collaborators** Invite `@salpers` and `@patgun` to your private repository so we can review your code.
+
+3. **Notify Us** Email us the link to your repository once you are finished and ready for review.
 
 ---
 
