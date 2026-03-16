@@ -1,7 +1,7 @@
 INDUSTRIELIEFERVERTRAG
 
 I. Vertragsgegenstand
-Lieferung von Rohstoffen gemäß Spezifikation Blatt A.
+Lieferung von Rohstoffen gemäß Spezifikation Blatt A. Dieser Vertrag hat eine Laufzeit von 24 Monaten ab dem 01.03.2026. Er kann von jeder Partei mit einer Frist von 3 Monaten zum Vertragsende gekündigt werden.
 
 II. Gewährleistung
 Mängelansprüche verjähren in 12 Monaten.
@@ -14,3 +14,21 @@ Die Rechnungsstellung erfolgt nach Versand. In Anbetracht der logistischen Abwic
 
 V. Gerichtsstand
 Ausschließlicher Gerichtsstand ist Hamburg.
+
+---
+
+Ort, Datum: ___________________
+
+Für den Besteller:
+Frankfurter Chemiewerke AG
+Industriepark Höchst, 65926 Frankfurt am Main
+
+_____________________________
+(Unterschrift, Stempel)
+
+Für den Lieferer:
+Stahl & Rohstoff GmbH
+Montanstraße 15, 45127 Essen
+
+_____________________________
+(Unterschrift, Stempel)
