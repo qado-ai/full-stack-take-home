@@ -7,7 +7,7 @@ on:
 
 permissions:
   pull-requests: write
-  contents: read
+  contents: write  # needed to push the temporary sync branch
 
 jobs:
   create-sync-prs:
@@ -19,10 +19,22 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Generate PRs for all role branches
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Files excluded from the sync — these are role-specific and merging
+          # them from main would only cause conflicts.
+          EXCLUDE_FILES=(
+            "README.md"
+            ".github/workflows/cascade-sync.yml"
+          )
+
           # 1. Find all remote branches that start with 'origin/role/'
           # 2. Strip 'origin/' so we just have the branch name (e.g., 'role/FDE')
           # 3. Clean up any whitespace
@@ -33,14 +45,67 @@ jobs:
             exit 0
           fi
 
-          # Loop through each branch and use the GitHub CLI to open a PR
+          # Loop through each branch and create a scoped sync PR
           for BRANCH in $ROLE_BRANCHES; do
+            echo "──────────────────────────────────────────"
             echo "Checking sync for branch: $BRANCH..."
+
+            SAFE_BRANCH="${BRANCH//\//-}"
+            TEMP_BRANCH="sync/main-to-${SAFE_BRANCH}"
+
+            # Create a temporary branch off the role branch
+            git checkout -b "$TEMP_BRANCH" "origin/$BRANCH"
+
+            # Merge main without committing so we can restore excluded files first
+            git merge origin/main --no-commit --no-ff || true
+
+            # Restore excluded files to their role-branch versions
+            for FILE in "${EXCLUDE_FILES[@]}"; do
+              if git show "origin/$BRANCH:$FILE" > /dev/null 2>&1; then
+                git checkout "origin/$BRANCH" -- "$FILE"
+              else
+                git rm -f "$FILE" 2>/dev/null || true
+              fi
+              git add "$FILE" 2>/dev/null || true
+            done
+
+            # Check for unresolved conflicts outside the excluded files
+            UNRESOLVED=$(git ls-files --unmerged | awk '{print $4}' | sort -u \
+              | grep -vxF "README.md" \
+              | grep -vxF ".github/workflows/cascade-sync.yml")
+            if [ -n "$UNRESOLVED" ]; then
+              echo "⚠️  Unresolved conflicts in $BRANCH (manual resolution required):"
+              echo "$UNRESOLVED"
+              git reset --hard "origin/$BRANCH"
+              git checkout main
+              git branch -D "$TEMP_BRANCH" 2>/dev/null || true
+              continue
+            fi
+
+            # Skip if there are no effective changes after the exclusions
+            if git diff --cached --quiet; then
+              echo "ℹ️  No changes to sync for $BRANCH after exclusions — skipping."
+              git reset --hard "origin/$BRANCH"
+              git checkout main
+              git branch -D "$TEMP_BRANCH" 2>/dev/null || true
+              continue
+            fi
+
+            git commit -m "🔄 Sync: Cascade latest scaffolding from main"
+            git push origin "$TEMP_BRANCH" --force-with-lease
 
             gh pr create \
               --base "$BRANCH" \
-              --head main \
+              --head "$TEMP_BRANCH" \
               --title "🔄 Sync: Cascade latest scaffolding to $BRANCH" \
-              --body "Automated PR to bring the latest base scaffolding updates from \`main\` into the \`$BRANCH\` branch. Please review and resolve any merge conflicts before merging." \
+              --body "Automated PR to bring the latest base scaffolding updates from \`main\` into the \`$BRANCH\` branch.
+
+> ⚠️ \`README.md\` and \`.github/workflows/cascade-sync.yml\` are **excluded** from this sync to avoid merge conflicts.
+
+Please review and resolve any remaining conflicts before merging." \
               || echo "ℹ️ PR already exists or no changes to sync for $BRANCH."
+
+            # Return to main for the next iteration
+            git checkout main
+            git branch -D "$TEMP_BRANCH" 2>/dev/null || true
           done

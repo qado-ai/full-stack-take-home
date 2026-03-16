@@ -1,7 +1,17 @@
 DIENSTLEISTUNGSVERTRAG
 
+zwischen
+
+Leipziger Handelshaus AG, Marktplatz 5, 04109 Leipzig
+– nachfolgend „Kunde" –
+
+und
+
+CloudBridge Consulting GmbH, Innovationsallee 12, 01069 Dresden
+– nachfolgend „Dienstleister" –
+
 1. Vertragsgegenstand
-Erbringung von IT-Beratungsleistungen.
+Erbringung von IT-Beratungsleistungen. Der Vertrag wird für eine Laufzeit von 12 Monaten geschlossen. Er verlängert sich stillschweigend um jeweils 12 Monate, sofern er nicht mit einer Frist von 3 Monaten zum Ende der jeweiligen Laufzeit schriftlich gekündigt wird.
 
 2. Mitwirkungspflichten
 Der Kunde stellt alle notwendigen Informationen zur Verfügung.

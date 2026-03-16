@@ -1,7 +1,22 @@
 PROJEKTVERTRAG
 
+zwischen
+
+Berliner Versicherungsgruppe AG, Unter den Linden 42, 10117 Berlin
+– nachfolgend „Auftraggeber" –
+
+und
+
+DigitalCore Solutions GmbH, Technopark 9, 10557 Berlin
+– nachfolgend „Auftragnehmer" –
+
+sowie
+
+Finanzhaus Capital GmbH, Friedrichstraße 100, 10117 Berlin
+– nachfolgend „Bürge" –
+
 § 1 Geltungsbereich
-Diese Bedingungen gelten für das Projekt "Alpha".
+Diese Bedingungen gelten für das Projekt "Alpha". Die Projektlaufzeit beträgt 18 Monate ab Vertragsunterzeichnung. Eine vorzeitige Beendigung ist nur aus wichtigem Grund möglich. Der Bürge übernimmt die selbstschuldnerische Bürgschaft für sämtliche Verpflichtungen des Auftragnehmers aus diesem Vertrag.
 
 § 2 Vergütung und Zahlung
 Das Honorar ist ein Pauschalfestpreis. Nebenkosten werden nicht erstattet. Abweichend von § 271 BGB wird die Fälligkeit der Vergütung hinausgeschoben; der Auftraggeber ist berechtigt und verpflichtet, die Zahlung 90 Tage nach Abnahme und Rechnungserhalt vorzunehmen.

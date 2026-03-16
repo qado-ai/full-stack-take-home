@@ -2,6 +2,8 @@
   {
     "file_name": "contract1.txt",
     "industry": "Manufacturing",
+    "parties": ["Deutsche Industriewerke AG", "Müller Maschinenbau GmbH"],
+    "term_duration": "36 months",
     "liability_type": "unlimited",
     "liability_detail": "unbeschränkt haftet, ohne dass eine summenmäßige Begrenzung greift",
     "payment_terms_days": 30,
@@ -11,6 +13,8 @@
   {
     "file_name": "contract2.txt",
     "industry": "Manufacturing",
+    "parties": ["Bayerische Motorentechnik AG", "Rheinmetall Komponenten GmbH"],
+    "term_duration": "24 months",
     "liability_type": "unlimited",
     "liability_detail": "Haftungsobergrenze für Schäden ... ausdrücklich ausgeschlossen ist und der Lieferant somit unbegrenzt einsteht",
     "payment_terms_days": 30,
@@ -20,6 +24,8 @@
   {
     "file_name": "contract3.txt",
     "industry": "Manufacturing (Components)",
+    "parties": ["Norddeutsche Elektronik AG", "Weber Präzisionsteile GmbH & Co. KG"],
+    "term_duration": "48 months",
     "liability_type": "unlimited",
     "liability_detail": "keine summenschmäßige Limitierung gilt, d.h. die Haftung ist der Höhe nach unbeschränkt",
     "payment_terms_days": 30,
@@ -29,6 +35,8 @@
   {
     "file_name": "contract4.txt",
     "industry": "Logistics",
+    "parties": ["Hanseatische Waren AG", "Schnellweg Logistik GmbH"],
+    "term_duration": "12 months",
     "liability_type": "capped",
     "liability_detail": "maximal auf die Höhe des doppelten Auftragswertes begrenzt",
     "payment_terms_days": 90,
@@ -38,6 +46,8 @@
   {
     "file_name": "contract5.txt",
     "industry": "Industrial (Raw Materials)",
+    "parties": ["Frankfurter Chemiewerke AG", "Stahl & Rohstoff GmbH"],
+    "term_duration": "24 months",
     "liability_type": "capped",
     "liability_detail": "begrenzt auf den vertragstypischen, vernünftigerweise vorhersehbaren Schaden",
     "payment_terms_days": 90,
@@ -47,6 +57,8 @@
   {
     "file_name": "contract6.txt",
     "industry": "Automotive",
+    "parties": ["Süddeutsche Automobilwerke AG", "TransEuropa Spedition GmbH"],
+    "term_duration": "36 months",
     "liability_type": "capped",
     "liability_detail": "auf 1 Mio. EUR pro Schadensereignis pauschaliert begrenzt",
     "payment_terms_days": 75,
@@ -56,6 +68,8 @@
   {
     "file_name": "contract7.txt",
     "industry": "IT Projects",
+    "parties": ["Berliner Versicherungsgruppe AG", "DigitalCore Solutions GmbH", "Finanzhaus Capital GmbH"],
+    "term_duration": "18 months",
     "liability_type": "unlimited",
     "liability_detail": "für sämtliche verursachten Schäden unbeschränkt und der Höhe nach unlimitiert haftet",
     "payment_terms_days": 90,
@@ -65,6 +79,8 @@
   {
     "file_name": "contract8.txt",
     "industry": "IT Services",
+    "parties": ["Leipziger Handelshaus AG", "CloudBridge Consulting GmbH"],
+    "term_duration": "12 months",
     "liability_type": "capped",
     "liability_detail": "auf den Auftragswert begrenzt",
     "payment_terms_days": 30,
@@ -74,6 +90,8 @@
   {
     "file_name": "contract9.txt",
     "industry": "General Trade",
+    "parties": ["Dresdner Baubedarf GmbH", "Westfälische Handelsgesellschaft mbH"],
+    "term_duration": "24 months",
     "liability_type": "capped",
     "liability_detail": "auf den direkten Schaden und die Höhe des Lieferwertes begrenzt",
     "payment_terms_days": 30,
@@ -83,6 +101,8 @@
   {
     "file_name": "contract10.txt",
     "industry": "Professional Services",
+    "parties": ["Kölner Immobilienverwaltung GmbH", "Dr. Fischer & Partner Sachverständige GbR"],
+    "term_duration": null,
     "liability_type": "capped",
     "liability_detail": "auf die Deckungssumme der Berufshaftpflichtversicherung beschränkt",
     "payment_terms_days": 14,
