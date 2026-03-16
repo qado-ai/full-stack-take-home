@@ -1,7 +1,7 @@
-# Take-Home Task: AI Contract Intelligence Prototype
+🛑 Welcome to the Qado Take-Home Challenge!
+If you are reading this, you are on the default branch. There are no instructions here.
 
-**Role**: AI Product Engineer  
-**Timeboxed**: 6-8 hours recommended. We value a working MVP over a complete feature set. If you hit the time limit, document what you would have done next.
+Please switch to the branch that corresponds to the role you are interviewing for (e.g., role/FDE, role/SWE) to see your specific instructions and scaffolding. Guidance should be included in your briefing mail.
 
 ## How to Start This Challenge
 
