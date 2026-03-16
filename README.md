@@ -30,7 +30,7 @@ In procurement, teams struggle to quickly understand the risks in thousands of p
 *   **Focus**: Core extraction logic, correct data flow, and handling "risk" scenarios.
 *   **Ignore**: User authentication, database persistence, or production deployment. Use a component library or standard Tailwind classes. We will not judge visual polish, only layout logic.
 
-**Test Data**: We have provided a set of sample contracts for you to test with in [`data/sample_contracts.txt`](data/sample_contracts.txt).
+**Test Data**: We have provided a set of sample contracts for you to test with in [`data/generated_contracts/`](data/generated_contracts/).
 
 ## 2. Technical Stack
 
@@ -45,7 +45,7 @@ We have provided a fully scaffolded monorepo to save you time on setup. Your foc
 This project uses **Contract-Driven Development**. Your workflow should look like this:
 1.  Edit Pydantic Models and FastAPI routes (`backend/src/...`).
 2.  Run `uv run generate-openapi` (in backend).
-3.  Run `npm run generate:api` (in frontend).
+3.  Run `npm run generate-api` (in frontend).
 4.  Use the new types/hooks in your React components.
 
 ## 3. The Requirements
@@ -81,7 +81,7 @@ Your job is to ensure the AI detects these specific conditions and the UI highli
 ## 4. Implementation Plan (Milestones)
 
 - **Backend Logic**: Define your Pydantic models (the contract) and implement the extraction logic.
-- **The "Handshake"**: Generate the OpenAPI spec and run `npm run generate:api` to create your React hooks.
+- **The "Handshake"**: Generate the OpenAPI spec and run `npm run generate-api` to create your React hooks.
 - **Frontend Layout**: Build the dashboard using the generated hooks (`useContractAnalysis`) to ensure types match immediately.
 - **Prompt Engineering**: Refine the prompt to precisely extract legal terms and identify missing info.
 - **Review**: No written documentation required. Be prepared to walk us through your solution and architectural decisions live.
