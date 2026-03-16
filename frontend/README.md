@@ -20,7 +20,7 @@ Instead of manually writing `fetch` calls and duplicating TypeScript interfaces 
 ### Prerequisites
 
 *   **Node.js**: (Managed via Volta or Homebrew)
-*   **Backend Server**: The Python backend must be running locally to generate types initially.
+*   **Backend OpenAPI Spec**: The backend's `openapi.json` must be generated (Orval reads it from the local file, not a live server).
 
 ### Installation
 
@@ -46,10 +46,10 @@ We generate our API layer automatically. You do **not** need to write fetchers m
 
 ### How to Generate
 
-1.  **Ensure Backend is Running**: Orval fetch the schema from `http://localhost:8000/openapi.json`.
+1.  **Ensure the OpenAPI spec exists**: Orval reads the schema from the local file at `../backend/openapi.json`. If it doesn't exist yet, generate it:
     ```bash
     # In the backend/ folder
-    uv run fastapi dev src/main.py
+    uv run generate-openapi
     ```
 2.  **Run the Generator**:
     ```bash
@@ -59,7 +59,7 @@ We generate our API layer automatically. You do **not** need to write fetchers m
 
 ### What gets generated?
 
-Look in `src/lib/api.ts` (or similar configured path). You will find:
+Look in `src/api/generated.ts`. You will find:
 *   **TypeScript Interfaces**: Matching the Pydantic models (e.g., `ContractAnalysisResult`).
 *   **React Query Hooks**: Ready-to-use hooks like `useAnalyzeContract()`.
 
@@ -68,7 +68,7 @@ Look in `src/lib/api.ts` (or similar configured path). You will find:
 In your components, you simply import the generated hook:
 
 ```tsx
-import { useAnalyzeContract } from '@/lib/api';
+import { useAnalyzeContract } from '@/api/generated';
 
 export function Analyzer() {
   const { mutate, data, isPending } = useAnalyzeContract();
@@ -90,8 +90,8 @@ frontend/
 ├── orval.config.ts     # Configuration for API generation
 ├── src/
 │   ├── app/            # Next.js App Router pages & layouts
-│   ├── lib/            
-│   │   └── api.ts      # 🤖 Generated API client (Do not edit manually)
-│   └── components/     # Your React components
+│   └── api/
+│       ├── generated.ts    # 🤖 Generated API client (Do not edit manually)
+│       └── custom-instance.ts # Custom Axios/fetch instance for Orval
 └── package.json
 ```
