@@ -1,7 +1,20 @@
 # LIEFERVERTRAG (Rahmenvertrag)
 
+zwischen
+
+**Deutsche Industriewerke AG**, Industriestraße 12, 70173 Stuttgart
+– nachfolgend „Auftraggeber" –
+
+und
+
+**Müller Maschinenbau GmbH**, Werkstraße 45, 89073 Ulm
+– nachfolgend „Auftragnehmer" –
+
 ## § 1 Präambel
 Zwischen den Parteien besteht Einigkeit darüber, dass die Zusammenarbeit auf einer vertrauensvollen Basis erfolgen soll. Die nachfolgenden Regelungen gelten für alle Lieferungen und Leistungen, die der Auftragnehmer für den Auftraggeber erbringt. Abweichende Geschäftsbedingungen finden keine Anwendung, es sei denn, ihrer Geltung wurde ausdrücklich schriftlich zugestimmt.
+
+## § 1a Vertragslaufzeit
+Dieser Rahmenvertrag tritt am 01.01.2026 in Kraft und hat eine feste Laufzeit von 36 Monaten. Er endet somit am 31.12.2028, ohne dass es einer Kündigung bedarf. Eine Verlängerung bedarf der schriftlichen Vereinbarung beider Parteien.
 
 ## § 2 Leistungsumfang und Qualitätssicherung
 Der Auftragnehmer verpflichtet sich, die Produkte in der spezifizierten Qualität zu liefern. Änderungen an den Spezifikationen bedürfen der vorherigen schriftlichen Zustimmung. Im Rahmen der Qualitätssicherung wird vereinbart, dass regelmäßige Audits durchgeführt werden können, deren Kosten, sofern nicht anders vereinbart, jeweils die prüfende Partei trägt, wobei Protokolle anzufertigen sind.
